@@ -4,18 +4,23 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
+  --foreground: #1e231e;
+  --color-primary: #f48265;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-red: #d75555;
+  --color-peach: #ffc8aa;
+  
+  --color-beige-1: #fcfaf5;
+  --color-beige-2: #f0ede2;
+  --color-beige-3: #f7f1e2;
+  --color-beige-4: #bdb28c;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.filter-white {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
 }
