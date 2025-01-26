@@ -10,16 +10,17 @@ type Props = {
   experts?: string[] | null
   viewCount?: number | null
   index: number
+  slug: string
 }
 
-export default function CourseCard({ title, description, experts, viewCount, index }: Props) {
+export default function CourseCard({ title, description, experts, viewCount, slug, index }: Props) {
   return (
-    <Link className="flex flex-col justify-start items-stretch bg-beige-1 rounded-lg w-[480px] relative" href={`/course/${index}`}>
+    <Link className="flex flex-col justify-start items-stretch bg-beige-1 rounded-lg w-full md:w-[400px] relative" href={`/courses/${slug}`}>
       <div className="w-full h-[170px] rounded-lg relative">
         <Image src={`/assets/wave-${index % 6 + 1}.svg`} fill alt="wave pattern" />
       </div>
       <div className="flex flex-col gap-6 px-10 pb-20">
-        <h2 className="font-editorial text-5xl">{title}</h2>
+        <h2 className="font-editorial text-4xl md:text-5xl">{title}</h2>
         <p className="font-inter text-md">{description}</p>
         {experts?.length ? <p className="font-inter text-md w-10/12">Featuring Expert from <b>{summarizeList(experts)}</b></p> : null}
       </div>

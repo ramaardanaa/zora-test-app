@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from 'next/font/google'
+import { Inter, PT_Serif } from 'next/font/google'
 import LocalFont from 'next/font/local'
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 import Navbar from "@/components/Navbar";
@@ -10,6 +10,13 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+})
+
+const ptSerif = PT_Serif({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-pt-serif',
+  weight: '400',
 })
 
 const editorial: NextFontWithVariable = LocalFont({
@@ -36,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${editorial.variable} antialiased`}
+        className={`${inter.variable} ${editorial.variable} ${ptSerif.variable} antialiased`}
       >
         <Navbar />
         {children}
