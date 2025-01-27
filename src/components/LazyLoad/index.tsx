@@ -59,4 +59,6 @@ const LazyLoad = forwardRef<HTMLElement, LazyLoadProps>(
   }
 );
 
+LazyLoad.displayName = 'LazyLoad';
+
 export default LazyLoad;

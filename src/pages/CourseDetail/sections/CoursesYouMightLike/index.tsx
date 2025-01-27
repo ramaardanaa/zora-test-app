@@ -2,6 +2,7 @@ import CourseCard from "@/components/CourseCard";
 import { CourseData } from "@/utils/type/course";
 
 export default function CoursesYouMightLike({relatedCourse} : {relatedCourse: CourseData[]}) {
+  if (!relatedCourse) return null;
   return (
     <section className="container mt-20">
       <h2 className="font-pt-serif text-4xl tracking-tight mb-4">Other Courses You Might Like</h2>

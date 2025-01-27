@@ -19,6 +19,12 @@ export default async function Courses({
     return course.tags.includes(params);
   })
 
+  if(filteredCourses.length === 0) {
+    return {
+      status: 404
+    }
+  }
+
   return (
     <CoursesPage courses={filteredCourses} params={params} />
   );

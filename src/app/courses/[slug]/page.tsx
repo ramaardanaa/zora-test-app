@@ -24,7 +24,7 @@ export default async function CourseDetail({ params }: PageProps) {
   
   const course = COURSES_DUMMY_DATA.find((course) => course.slug === slug)
 
-  if (!course) {
+  if (!course || !relatedCourse) {
     return {
       status: 404
     }

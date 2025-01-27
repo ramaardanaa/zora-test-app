@@ -8,12 +8,14 @@ type Props = {
 }
 
 export default function Courses({ courses, params }: Props) {
-  
+  if (!courses) {
+    return
+  }
   const tabs = [
     { name: 'All', href: '/', current: params === undefined },
     { name: 'Introductory', href: '?filters=introductory', current: params === 'introductory' },
     { name: 'Advanced', href: '?filters=advanced', current: params === 'advanced' },
-    { name: 'Population Specific', href: '?filters=population_specific', current:  params === 'population_specific' },
+    { name: 'Population Specific', href: '?filters=population_specific', current: params === 'population_specific' },
   ]
 
   return (

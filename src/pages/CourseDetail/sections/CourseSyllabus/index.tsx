@@ -4,6 +4,7 @@ import { CourseData } from "@/utils/type/course";
 import { TbRosetteDiscountCheckFilled } from "react-icons/tb";
 
 export default function CourseSyllabus({course} : {course: CourseData}) {
+  if (!course) return null;
   return (
     <div className="container flex flex-row gap-20 flex-wrap mt-10 pb-20">
         <div className="flex flex-col gap-4 flex-grow">

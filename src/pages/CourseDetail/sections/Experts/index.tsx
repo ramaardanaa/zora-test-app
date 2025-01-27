@@ -2,6 +2,7 @@ import { CourseData } from "@/utils/type/course";
 import Image from "next/image";
 
 export default function Experts({ course }: { course: CourseData }) {
+  if (!course) return null;
   return (
     <div>
       <section className="container mt-20">

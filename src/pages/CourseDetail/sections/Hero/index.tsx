@@ -4,6 +4,7 @@ import { FiClock } from "react-icons/fi";
 import { LuPresentation } from "react-icons/lu";
 
 export default function Hero({ course }: { course: CourseData }) {
+  if (!course) return null;
   return (
     <div className="bg-beige-1">
       <div className="w-[100vw] h-[15vw] relative">
