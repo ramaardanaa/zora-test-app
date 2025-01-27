@@ -1,7 +1,8 @@
 import CourseCard from "@/components/CourseCard";
 import { CourseData } from "@/utils/type/course";
+import Link from "next/link";
 
-export default function CoursesYouMightLike({relatedCourse} : {relatedCourse: CourseData[]}) {
+export default function CoursesYouMightLike({ relatedCourse }: { relatedCourse: CourseData[] }) {
   if (!relatedCourse) return null;
   return (
     <section className="container mt-20">
@@ -18,6 +19,11 @@ export default function CoursesYouMightLike({relatedCourse} : {relatedCourse: Co
             slug={slug}
           />
         ))}
+      </div>
+      <div className="flex justify-center mt-10">
+        <Link href="/courses">
+          <button className="mx-auto bg-red text-white font-semibold p-4 rounded-lg mt-4">Explore All Courses</button>
+        </Link>
       </div>
     </section>
   )
