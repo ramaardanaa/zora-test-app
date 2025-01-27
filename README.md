@@ -39,6 +39,7 @@ https://zora-test-app.vercel.app
 #### Notes
 - Implement ISR on CourseDetail Page every 1 hours (faster page load and caching)
 - Implement Lazy load on Courses Page (increase full load speed time)
+- Add page 404 not found when routes/path is not found
 - Mobile Friendly
 - Total time spent on the project: 8-10 hours
 
@@ -47,3 +48,4 @@ https://zora-test-app.vercel.app
 
 #### Improvement Notes
 - create our own component and standarize icons for less dependency installed (like SwiperJS and React-Icons)
+- create navbar drawer menu when click menu on mobile view

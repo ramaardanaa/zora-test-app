@@ -19,11 +19,10 @@ export default function Navbar() {
         <button className="p-2 text-foreground hover:text-primary text-2xl">
           <LuSearch />
         </button>
-        <button className="p-2 text-foreground hover:text-primary">
-          <span className="flex flex-col gap-y-2">
-            <span className="h-[2px] bg-black w-6"></span>
-            <span className="h-[2px] bg-black w-6"></span>
-          </span>
+        <button className="p-2 text-foreground group flex flex-col gap-y-2">
+          <span className="h-[2px] bg-black group-hover:bg-primary w-6"></span>
+          <span className="h-[2px] bg-black group-hover:bg-primary w-6"></span>
+
         </button>
       </div>
     </nav>

@@ -7,8 +7,8 @@ export default function Hero({ course }: { course: CourseData }) {
   if (!course) return null;
   return (
     <div className="bg-beige-1">
-      <div className="w-[100vw] h-[15vw] relative">
-        <Image src={`/assets/wave-long-${course.id % 6 + 1}.svg`} fill objectFit="cover" alt="wave-long" />
+      <div className="w-[100vw] h-[17vw] relative">
+        <Image src={`/assets/wave-long-${course.id % 6 + 1}.svg`} fill objectFit="contain" alt="wave-long" />
       </div>
       <section className="container pb-28 flex flex-col gap-5">
         <div className="flex flex-row gap-7">
