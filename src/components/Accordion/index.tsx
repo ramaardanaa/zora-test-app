@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { GoChevronDown, GoChevronUp } from 'react-icons/go'
+import { GoChevronDown } from 'react-icons/go'
 
 type AccordionpProps = {
   children: React.ReactNode
@@ -21,7 +21,7 @@ export default function Accordion({
 
   useEffect(() => {
     setAccordionOpen(active)
-  }, [])
+  }, [active])
 
   return (
     <div className="border border-gray-200 rounded-lg">

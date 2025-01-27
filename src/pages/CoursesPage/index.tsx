@@ -1,10 +1,21 @@
-import ContentCard from "@/components/ContentCard";
-import CourseCard from "@/components/CourseCard";
-import FilterBar from "@/components/FilterBar";
-import TopicCard from "@/components/TopicCard";
-import { COURSES_DUMMY_DATA, EXPLORE_TOPICS_DUMMY_DATA, LESSONS_DUMMY_DATA, QUICK_READS_DUMMY_DATA } from "@/constants/courseDatas";
+'use client'
+import LazyLoad from "@/components/LazyLoad";
+import { CourseData } from "@/utils/type/course";
+import dynamic from 'next/dynamic'
+import Courses from "./sections/Courses";
 
-export default function CoursesPage() {
+type Props = {
+  courses: CourseData[]
+  params: string | string[] | undefined
+}
+
+const PopularLessons = dynamic(() => import('./sections/PopularLessons'))
+const QuickReads = dynamic(() => import('./sections/QuickReads'))
+const ExploreTopics = dynamic(() => import('./sections/ExploreTopics'))
+
+
+
+export default function CoursesPage({ courses, params }: Props) {
   return (
     <div className="pb-10">
       <div className="bg-beige-1 text-foreground py-16">
@@ -14,53 +25,12 @@ export default function CoursesPage() {
         </div>
       </div>
       <div className="container bg-white">
-        <section>
-          <FilterBar />
-          <h2 className="text-sm font-semibold mt-10">COURSES ({COURSES_DUMMY_DATA.length})</h2>
-          <div className="flex flex-row w-full flex-wrap gap-6 mt-10">
-            {COURSES_DUMMY_DATA.map(({ id, title, description, viewCount, expertInstitution, slug }, index) => (
-              <CourseCard
-                key={id}
-                title={title}
-                description={description}
-                viewCount={viewCount}
-                experts={expertInstitution}
-                index={index} 
-                slug={slug}
-              />
-            ))}
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-sm font-semibold mt-10">POPULAR LESSONS</h2>
-          <div className="flex w-full flex-wrap mt-10 gap-[20px]">
-            {LESSONS_DUMMY_DATA.map(({ id, title, courseLabel }) => (
-              <ContentCard className="w-full md:w-[calc(50%-20px)]" key={id} label={courseLabel} title={title} />
-            ))}
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-sm font-semibold mt-10">QUICK READS</h2>
-          <div className="flex w-full flex-wrap mt-10 gap-[20px]">
-            {QUICK_READS_DUMMY_DATA.map(({ id, title, label }) => (
-              <ContentCard className="w-full md:w-[calc(50%-20px)]" key={id} label={label} title={title} />
-            ))}
-          </div>
-          <div className="flex justify-end px-[20px]">
-            <button className="mt-5 font-inter font-semibold cursor-pointer">Show 50 more</button>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-sm font-semibold mt-10">EXPLORE TOPICS</h2>
-          <div className="flex flex-col mt-10 gap-[20px]">
-            {EXPLORE_TOPICS_DUMMY_DATA.map(({ id, title, viewCount }) => (
-              <TopicCard key={id} title={title} viewCount={viewCount} />
-            ))}
-          </div>
-        </section>
+        <Courses courses={courses} params={params} />
+        <LazyLoad>
+          <PopularLessons />
+          <QuickReads />
+          <ExploreTopics />
+        </LazyLoad>
       </div>
     </div>
   );

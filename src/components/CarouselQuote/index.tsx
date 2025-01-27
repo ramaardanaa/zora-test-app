@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -42,7 +41,7 @@ export default function CarouselQuote({ experts }: Props) {
         {experts.map((expert, index) => (
           <SwiperSlide key={index}>
             <div className="p-10 gap-2 flex flex-col h-full pb-36 justify-end">
-              <h2 className="font-editorial tracking-tighter text-5xl italic py-10">"{expert.quote}"</h2>
+              <h2 className="font-editorial tracking-tighter text-5xl italic py-10">&quot;{expert.quote}&quot;</h2>
               <div className="flex">
                 <div>
                   <Image className="rounded-full" src={expert.avatar} width={80} height={80} alt={expert.name} />

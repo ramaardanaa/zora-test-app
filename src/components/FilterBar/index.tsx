@@ -1,17 +1,10 @@
 import Link from "next/link"
 
-const tabs = [
-  { name: 'All', href: '#', current: false },
-  { name: 'Introductory', href: '#', current: true },
-  { name: 'Advanced', href: '#', current: true },
-  { name: 'Population Specific', href: '#', current: false },
-]
-
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function FilterBar() {
+export default function FilterBar({tabs}: {tabs: {name: string, href: string, current: boolean}[]}) {
   return (
     <div>
       <div className="hidden sm:block">

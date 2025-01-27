@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -14,22 +15,22 @@ export default function Footer() {
       <div className="container flex justify-between items-center flex-wrap">
         <div className="flex flex-col gap-y-5 font-semibold font-inter">
           <div className="flex gap-x-2 flex-wrap">
-            <a href="#" className="underline">Courses</a>
-            <a href="#" className="underline">Find a Doctor</a>
-            <a href="#" className="underline">Share a Review</a>
-            <a href="#" className="underline">For Employers</a>
-            <a href="#" className="underline">For Doctors and Clinics</a>
-            <a href="#" className="underline">All US Provider</a>
+            <Link href="/courses" className="underline">Courses</Link>
+            <Link href="" className="underline">Find a Doctor</Link>
+            <Link href="" className="underline">Share a Review</Link>
+            <Link href="" className="underline">For Employers</Link>
+            <Link href="" className="underline">For Doctors and Clinics</Link>
+            <Link href="" className="underline">All US Provider</Link>
           </div>
           <div className="flex gap-x-2 flex-wrap">
-            <a href="#" className="underline">info@fertilityiq.com</a>
-            <a href="#" className="underline">Terms of Use</a>
-            <a href="#" className="underline">Privacy Policy</a>
-            <a href="#" className="underline">FAQs</a>
+            <Link href="" className="underline">info@fertilityiq.com</Link>
+            <Link href="" className="underline">Terms of Use</Link>
+            <Link href="" className="underline">Privacy Policy</Link>
+            <Link href="" className="underline">FAQs</Link>
           </div>
         </div>
         <div className="text-start xl:text-end mt-4 font-inter">
-          <div>Our content is for informational purposes only - it's not a <br />
+          <div>Our content is for informational purposes only - it&apos;s not a <br />
             substitute for medical advice, diagnosis, or treatment.
           </div>
         </div>

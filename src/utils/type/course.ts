@@ -6,6 +6,9 @@ export type CourseData = {
   experts: Expert[]
   price: string
   courseDuration: string
+  viewCount: number | null
+  slug: string
+  expertInstitution: string[] | null
 }
 
 export type Lesson = {

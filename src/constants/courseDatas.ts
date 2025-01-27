@@ -48,7 +48,7 @@ export const COURSE_DETAIL_DUMMY_DATA =
     }
   ],
   "courseDuration": "3h 28m",
-  lessons: [
+  "lessons": [
     {
       "id": 1,
       "title": "What is IVF?",
@@ -295,6 +295,10 @@ export const COURSES_DUMMY_DATA = [
       "Johns Hopkins",
       "+16 more"
     ],
+    "tags": [
+      "advanced",
+      "population_specific",
+    ],
     "viewCount": 19000,
     ...COURSE_DETAIL_DUMMY_DATA
   },
@@ -307,6 +311,9 @@ export const COURSES_DUMMY_DATA = [
       "Cornell",
       "Harvard",
       "+3 more"
+    ],
+    "tags": [
+      "population_specific",
     ],
     "viewCount": 9000,
     ...COURSE_DETAIL_DUMMY_DATA
@@ -321,6 +328,7 @@ export const COURSES_DUMMY_DATA = [
       "UCLA",
       "+10 more"
     ],
+    "tags": [],
     "viewCount": 68000,
     ...COURSE_DETAIL_DUMMY_DATA
   },
@@ -333,6 +341,10 @@ export const COURSES_DUMMY_DATA = [
       "Yale",
       "UCLA",
       "+10 more"
+    ],
+    "tags": [
+      "introductory",
+      "advanced",
     ],
     "viewCount": 68000,
     ...COURSE_DETAIL_DUMMY_DATA
@@ -347,6 +359,9 @@ export const COURSES_DUMMY_DATA = [
       "Northwestern",
       "+15 more"
     ],
+    "tags": [
+      "advanced",
+    ],
     "viewCount": 73000,
     ...COURSE_DETAIL_DUMMY_DATA
   },
@@ -359,6 +374,9 @@ export const COURSES_DUMMY_DATA = [
       "Johns Hopkins",
       "Columbia",
       "+7 more"
+    ],
+    "tags": [
+      "population_specific",
     ],
     "viewCount": 30000,
     ...COURSE_DETAIL_DUMMY_DATA
@@ -373,6 +391,10 @@ export const COURSES_DUMMY_DATA = [
       "Cornell",
       "+14 more"
     ],
+    "tags": [
+      "advanced",
+      "population_specific",
+    ],
     "viewCount": 21000,
     ...COURSE_DETAIL_DUMMY_DATA
   },
@@ -383,6 +405,10 @@ export const COURSES_DUMMY_DATA = [
     "slug": "adoption",
     "expertInstitution": null,
     "viewCount": null,
+    "tags": [
+      "introductory",
+      "advanced",
+    ],
     ...COURSE_DETAIL_DUMMY_DATA
   },
   {
@@ -392,6 +418,9 @@ export const COURSES_DUMMY_DATA = [
     "slug": "foster-parenting-101",
     "expertInstitution": null,
     "viewCount": null,
+    "tags": [
+      "population_specific",
+    ],
     ...COURSE_DETAIL_DUMMY_DATA
   },
   {
@@ -404,6 +433,10 @@ export const COURSES_DUMMY_DATA = [
       "+8 more"
     ],
     "viewCount": null,
+    "tags": [
+      "introductory",
+      "population_specific",
+    ],
     ...COURSE_DETAIL_DUMMY_DATA
   },
   {
@@ -417,6 +450,10 @@ export const COURSES_DUMMY_DATA = [
       "+5 more"
     ],
     "viewCount": null,
+    "tags": [
+      "introductory",
+      "advanced",
+    ],
     ...COURSE_DETAIL_DUMMY_DATA
   },
   {
@@ -429,6 +466,10 @@ export const COURSES_DUMMY_DATA = [
       "UCSF",
       "+22 more"
     ],
+
+    "tags": [
+      "introductory",
+    ],
     "viewCount": 10000,
     ...COURSE_DETAIL_DUMMY_DATA
   },
@@ -439,6 +480,10 @@ export const COURSES_DUMMY_DATA = [
     "slug": "childless-by-circumstance",
     "expertInstitution": null,
     "viewCount": null,
+
+    "tags": [
+      "introductory",
+    ],
     ...COURSE_DETAIL_DUMMY_DATA
   },
   {
@@ -448,6 +493,9 @@ export const COURSES_DUMMY_DATA = [
     "slug": "childless-by-circumstance-guide-friends-family-colleagues",
     "expertInstitution": null,
     "viewCount": null,
+    "tags": [
+      "introductory",
+    ],
     ...COURSE_DETAIL_DUMMY_DATA
   },
   {
@@ -457,6 +505,9 @@ export const COURSES_DUMMY_DATA = [
     "slug": "acupuncture",
     "expertInstitution": null,
     "viewCount": 41000,
+    "tags": [
+      "introductory",
+    ],
     ...COURSE_DETAIL_DUMMY_DATA
   },
   {
@@ -470,6 +521,9 @@ export const COURSES_DUMMY_DATA = [
       "+9 more"
     ],
     "viewCount": null,
+    "tags": [
+      "introductory",
+    ],
     ...COURSE_DETAIL_DUMMY_DATA
   },
   {
@@ -482,6 +536,9 @@ export const COURSES_DUMMY_DATA = [
       "+11 more"
     ],
     "viewCount": 145000,
+    "tags": [
+      "introductory",
+    ],
     ...COURSE_DETAIL_DUMMY_DATA
   }
 ]
